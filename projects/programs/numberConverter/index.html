@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Serhiy Paziuk</title>
+	  	<link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon.png">	 
+	  	<link rel="shortcut icon" href="/img/favicons/favicon-32x32.png" type="image/png">	 
+	  	<link rel="shortcut icon" href="/img/favicons/favicon.ico" type="image/x-icon">	 
+	  	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png">	 
+	  	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png">	 
+	  	<link rel="manifest" href="/img/favicons/site.webmanifest">	 
+	  	<link rel="mask-icon" href="/img/favicons/safari-pinned-tab.svg" color="#00ffd7">	 
+	  	<meta name="msapplication-TileColor" content="#00ffd7">	 
+	  	<meta name="msapplication-TileImage" content="/img/favicons/mstile-144x144.png">	 
+	  	<meta name="theme-color" content="#00ffd7">	
+		<link rel="stylesheet" href="style.css">
+
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		
+		<main>
+			<section class="change">
+				<div class="select">
+					<div class="from">
+						<p>FROM</p>
+						<button class="select" onclick="showFrom();">Select <img src="https://img.icons8.com/pastel-glyph/64/000000/expand-arrow.png"/></button>
+						<ul class="from list">
+							<li onclick="systemsFrom.two();">2</li>
+							<li onclick="systemsFrom.eight();">8</li>
+							<li onclick="systemsFrom.ten();">10</li>
+							<li onclick="systemsFrom.sixteen();">16</li>
+						</ul>
+						<div class="nosf">?</div>
+					</div>
+					<div class="to">
+						<p>TO</p>
+						<button class="select" onclick="showTo();">Select <img src="https://img.icons8.com/pastel-glyph/64/000000/expand-arrow.png"/></button>
+						<ul class="to list">
+							<li onclick="systemsTo.two();">2</li>
+							<li onclick="systemsTo.eight();">8</li>
+							<li onclick="systemsTo.ten();">10</li>
+							<li onclick="systemsTo.sixteen();">16</li>
+						</ul>
+						<div class="nost">?</div>
+					</div>
+				</div>
+				<div class="input">
+					<input type="text" id="from">
+					<textarea id="to" readonly></textarea>
+				</div>
+				<div class="lets">
+					<button class="select" onclick="lets();">LETS GO</button>
+				</div>
+			</section>
+		</main>
+		<div class="error">
+			<h1>ERROR</h1>
+			<p>You writed wrong info or you should write info for work</p>
+			<button onclick="error();">OK</button>
+		</div>
+
+		<script src="js.js"></script>
+	</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+  <title>Snake 2d</title>
+
+  <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+  <link rel="manifest" href="favicons/site.webmanifest">
+  <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#b91d47">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+
+  <div class="config-wrapper">
+    <div class="config">
+      <div class="header">
+        <div class="title">
+          <h1>Hello, <span id="hiNickname"></span></h1>
+        </div>
+        <div class="subtitle">
+          <p>
+            This is a SNAKE! I love this game, and you?
+            If you also like this game, then LET`S GO !
+            But before you start playing, you should to write your nickname and choose the style of game
+          </p>
+        </div>
+      </div>
+      <div class="config-part">
+        <div class="nickname part">
+          <p>Nickname</p>
+          <input type="text" id="nickname" tabindex="1" placeholder="Enter your nickname">
+        </div>
+        <div class="color part">
+          <label for="head">The color of the snake's head</label>
+          <input type="color" id="head" tabindex="2" value="#FA0556" placeholder="Enter your nickname"
+            onchange="snakeStyleHead();">
+        </div>
+        <div class="color part">
+          <label for="tail">The color of the snake's tail</label>
+          <input type="color" id="tail" tabindex="3" value="#A00034" placeholder="Enter your nickname"
+            onchange="snakeStyleTail();">
+        </div>
+        <div class="color part">
+          <label for="berry">The color of the berry</label>
+          <input type="color" id="berry" tabindex="4" value="#ff0000" placeholder="Enter your nickname"
+            onchange="snakeStyleBerry();">
+        </div>
+        <div class="result">
+          <h3>Your Snake</h3>
+          <div class="snake-and-refresh">
+            <div class="snake">
+              <div id="berryStyle"></div>
+              <div id="snake-parts">
+                <div id="resultHead"></div>
+                <div class="tail"></div>
+              </div>
+            </div>
+            <div class="refresh">
+              <button onclick="refresh();"><img src="https://img.icons8.com/windows/32/000000/refresh.png" /></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="button">
+        <button type="submit" onclick="gameShow();">LET`S GO</button>
+      </div>
+    </div>
+  </div>
+  <div id="game">
+    <div class="assets">
+      <div class="buttons">
+        <button type="submit" onclick="gameHide();" id="backBTN">
+          <img src="https://img.icons8.com/ios-filled/24/000000/left.png"/>
+        </button>
+        <button onclick="soundTurn();">
+          <img id="sound1" src="https://img.icons8.com/material/24/000000/room-sound.png"/>
+          <img id="sound2" src="https://img.icons8.com/material-rounded/24/000000/mute.png"/>
+        </button>
+      </div>
+      
+      <div class="nickname">
+        <div class="name"></div>
+        <div class="change"><img onclick="changeName();" src="https://img.icons8.com/color/48/fa314a/pencil--v1.png"/></div>
+      </div>
+    </div>
+    <div class="game-header">
+      <div class="game-score">
+        <span class="score-count" onchange="record();"></span>
+      </div>
+      <div class="game-max">
+        <span class="max-count"></span>
+      </div>
+    </div>
+    <div class="canvas">
+      <div class="canvas-wrapper">
+        <canvas id="game-canvas" width="320" height="400"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="snake.js"></script>
+</body>
+
+</html>

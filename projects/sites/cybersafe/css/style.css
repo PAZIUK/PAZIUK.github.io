@@ -1,0 +1,1078 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;500;700;900&display=swap');
+:root{
+  --color-1:#008aff; 
+  --color-2:#00ffe7; 
+  --color-3:#333; 
+  --color-4:#f00; 
+}
+*{
+  outline: none;
+}
+html{
+  height: 100vh;
+  overflow: hidden;
+}
+body{
+  background-color: #2c3851;
+  font-family: 'Nunito', sans-serif;
+  overflow-x:hidden;
+  margin: 0px;
+  color: var(--color-3);
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  transition: all 2s;
+  height: 100%;
+}
+h1,h2,h3,h4,h5,h6{
+  color: var(--color-3);
+}
+.wrapper{
+  min-width: 320px;
+  max-width: 1200px;
+  padding: 0 1.4rem;
+  margin: 0px auto;
+  position: relative;
+  min-height: 100%;
+}
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+header .box{
+  background-color: #fff;
+  padding: 1% 1.5rem;
+  border-radius: 10px;
+  z-index: 10;
+}
+.logo{
+  color: #008aff;
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem 4rem;
+  border-radius: 100px;
+  border: 3px solid #00ffe7;
+}
+.logo img{
+  display: block;
+  width: 50px;
+  margin-right: 10px;
+}
+
+
+.box{
+  background: white;
+  padding: 1rem;
+  margin: 1.4rem 0;
+  border-radius: 10px;
+}
+
+.hello-block{
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 3rem);
+}
+.hello-block header{
+  opacity: 0;
+  transition: all 1s ease;
+  transform: translate(-300%,0);
+}
+.hello-block footer{
+  opacity: 0;
+  transition: all 1s ease;
+  transform: translate(300%,0);
+}
+.hello-block .box.hello{
+  opacity: 0;
+  transition: all 1s ease;
+  transform: scale(0.001);
+}
+.hello-block header.active,.hello-block .box.hello.active,.hello-block footer.active{
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+.hello-block header .box{
+  margin: 0;
+}
+.hello-block footer .box{
+  margin-top: 0;
+}
+
+
+.hello{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hellononv{
+  display: none;
+}
+.hellononv.active{
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.hello .photo_text{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.hello .photo{
+  margin-right: 2rem;
+}
+.hello .photo img{
+  width: 15rem;
+}
+.hello .text{
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+.btns{
+  margin-top: .5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#letsGo, .btns button,.robot-choose .levels .level{
+  color: var(--color-1);
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem 1rem;
+  border-radius: 100px;
+  border: 3px solid var(--color-2);
+  background: white;
+  transition: all .7s ease;
+  cursor: pointer;
+}
+#letsGo:hover,.btns button:hover,.robot-choose .levels .level:hover{
+  padding: 0.3rem 4rem;
+  border-color: var(--color-1);
+  color: white;
+  background: var(--color-1);
+}
+.btns button.bad{
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem 1rem;
+  border-radius: 100px;
+  border: 3px solid var(--color-4);
+  background: white;
+  transition: all .7s ease;
+  cursor: pointer;
+}
+.btns button.bad:hover{
+  padding: 0.3rem 4rem;
+  border-color: var(--color-4);
+  color: white;
+  background: var(--color-4);
+}
+.btns button.noactive1,#letsGo.noactive1,.robot-choose .levels .level.noactive1{
+  color: white;
+  background: #d6d6d6;
+  border-color: #bdbdbd;
+  padding: 0.3rem 4rem;
+  cursor: default;
+}
+.btns button[disabled="disabled"]:hover{
+  color: white;
+  background: #d6d6d6;
+  border-color: #bdbdbd;
+  cursor: default;
+}
+footer .box{
+  display: flex;
+}
+footer .box .text{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.box.start{
+  transition: all .7 ease;
+  transform: translate(0,700%);
+  display: none;
+}
+.box.start h2{
+  color: black;
+}
+.box.start.active{
+  transform: translate(0);
+  display: flex;
+  flex-direction: column;
+}
+
+.level1{
+  display: none;
+  margin-top: 3rem;
+}
+.level1.active{
+  display: flex;
+  flex-direction: column;
+}
+.level1 h2{
+  font-size: 2rem;
+  color: white;
+  margin: 0 auto;
+}
+
+
+.level2,.level3,.level4,.level5,.level6,.level7,.level8,.level9,.level10{
+  margin-top: 3rem;
+  transition: all .7 ease;
+  transform: translate(0,700%);
+  display: none;
+}
+.level2.active,.level3.active,.level4.active,.level5.active,
+.level6.active,.level7.active,.level8.active,.level9.active,.level10.active{
+  transform: translate(0);
+  display: flex;
+  flex-direction: column;
+}
+.level1 .box:first-child,
+.level2 .box:first-child,
+.level3 .box:first-child,
+.level4 .box:first-child,
+.level5 .box:first-child,
+.level6 .box:first-child,
+.level7 .box:first-child,
+.level8 .box:first-child,
+.level9 .box:first-child{
+  margin-top: 0;
+}
+
+#startGame{
+  transition: all .7 ease;
+  display: none;
+  padding: 2rem 15rem;
+  font-size: 3rem;
+  border-radius: 100px;
+  border:4px solid red;
+  cursor: pointer;
+  background: white;
+  animation-name: border;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.startBtn{
+  display: none;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  height: 10rem;
+}
+.startBtn.active{
+  display: flex;
+}
+#startGame.active{
+  display: flex;
+}
+
+@-webkit-keyframes border {
+  from {
+    border-width: 4px;
+  }
+  50%{
+    border-width: 1px;
+  } 
+  to { 
+    border-width: 4px; 
+  }  
+}
+@-moz-keyframes move_eye { 
+  from {
+    border-width: 4px;
+  }
+  50%{
+    border-width: 1px;
+  } 
+  to { 
+    border-width: 4px; 
+  }   
+}
+@-o-keyframes move_eye { 
+  from {
+    border-width: 4px;
+  }
+  50%{
+    border-width: 1px;
+  } 
+  to { 
+    border-width: 4px; 
+  }    
+}
+@keyframes border{
+  from {
+    border-width: 4px;
+  }
+  50%{
+    border-width: 1px;
+  } 
+  to { 
+    border-width: 4px; 
+  }  
+}
+
+#mark{
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  top: .5rem;
+  left: 0;
+  width: 100%;
+}
+#mark.active{
+  display: flex;
+}
+.pnBtn,.markBox{
+  display: none;
+  cursor: pointer;
+  background: white;
+  border:none;
+  border-radius: 10px;
+  padding: .1rem .5rem;
+}
+.markBox .markNum{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: .5rem;
+  font-size: 1.5rem;
+}
+.markBox{
+  display: flex;
+  cursor: default;
+}
+.pnBtn img,.markBox img{
+  width: 2rem;
+}
+.pnBtn.nBtn{
+  position: absolute;
+  top: .5rem;
+  right: 1.4rem;
+}
+.pnBtn.pBtn{
+  position: absolute;
+  top: .5rem;
+  left: 1.4rem;
+}
+.pnBtn.nBtn.active,.pnBtn.pBtn.active{
+  z-index: 1000;
+  display: flex;
+  -webkit-box-shadow: 2px 5px 8px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 2px 5px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 2px 5px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.downloadFake{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.downloadFake .upside{
+  display: flex;
+  width: 100%;
+  background: #bdbdbd;
+  border-radius: 100px;
+  padding: .1rem;
+}
+.downloadFake .upside .buttons{
+  padding: 0 .5rem;
+}
+.downloadFake .upside .buttons img{
+  margin-right: .7rem;
+}
+.downloadFake .upside .buttons img:last-child{
+  margin: 0;
+}
+.downloadFake .upside .line{
+  padding: .1rem 1rem;
+  color: black;
+  background: #d6d6d6;
+  border-radius: 100px;
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.downloadFake .upside .line img{
+  margin-right: .5rem;
+}
+.downloadFake .content{
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  width: 100%;
+}
+.downloadFake .content .left img{
+  width: 15rem;
+}
+.downloadFake .content .left{
+  margin-right: 2rem;
+}
+.downloadFake .content .right .info{
+  display: flex;
+  flex-direction: column;
+}
+.downloadFake .content .right .info .info_detail{
+  display: flex;
+  padding: 1rem;
+  background:#c9fff3;
+  justify-content: space-between;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+.downloadFake .content .right .info .info_detail .key{
+  margin-right: 3rem;
+  font-weight: bold;
+}
+.downloadFake .content .right .info .info_detail .value{
+  
+}
+.downloadFake .content .right .fakeD{
+  padding: .4rem 1rem .4rem .4rem;
+  display: flex;
+  box-shadow: 0 0 1px 0;
+  font-size: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.downloadFake .content .right .fakeD button,.downloadFake .content .right .rightD button{
+  border: none;
+  background: #4aff29;
+  padding: .5rem 3rem;
+  font-size: 2rem;
+  flex-wrap: bold;
+}
+.downloadFake .content .right .rightD button{
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 1rem;
+  border-radius: 10px;
+}
+.downloadFake .load{
+  margin-top: 1rem;
+  border-radius: 100px;
+  height: 1rem;
+  background: #d6d6d6;
+  opacity: 0;
+}
+.downloadFake .load.active{
+  opacity: 1;
+}
+.downloadFake .load .line{
+  height: .99rem;
+  width: 0%;
+  border-radius: 100px;
+  background-color: #4aff29;
+}
+.downloadFake button#startGameAD{
+  padding: 1rem 5rem;
+  border-radius: 100px;
+  cursor: pointer;
+  background: red;
+  color: white;
+  display: none;
+  margin: 1rem auto;
+  font-size: 2rem;
+  border:none;
+  transition: all .7s ease;
+}
+.downloadFake button#startGameAD:hover{
+  padding: 1rem 8rem;
+}
+.downloadFake button#startGameAD.active{
+  display: flex;
+}
+
+#titles{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5rem;
+}
+#titles.active{
+  display: flex;
+}
+#titles h1{
+  transform: translate(0,1000%);
+  transition: all .7s ease;
+  color: red; 
+  font-weight: bold;
+  font-size: 4rem;
+}
+#titles .names h2{
+  transition: all .7s ease;
+  font-size: 2rem;
+  color: black;
+  margin-top: .5rem;
+}
+#titles .names{
+  margin-top: 2rem;
+  padding: 2rem;
+}
+#titles .names .pupil{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  transition: all 1s ease;
+}
+#titles .names .pupil:first-child{
+  transition: all .7s ease;
+  transform: translate(-1000%,0);
+}
+#titles .names .pupil:last-child{
+  transition: all .7s ease;
+  transform: translate(1000%,0);
+}
+#titles .names .pupil.active,#titles h1.active{
+  transform: translate(0);
+}
+
+
+/*MEDIA*/
+@media(max-width: 320px){
+  .logo img{
+    width: 2rem;
+  }
+  .hello-block header{
+    margin: 0 .2rem;
+  }
+  footer .box .text{
+    font-size: .6rem;
+    margin-top: .5rem;
+  }
+  .box{
+    margin: 1.4rem .2rem;
+  }
+  .logo{
+    padding: .3rem 2rem;
+  }
+  .hello .text{
+    font-size: 1rem;
+  }
+  .hello .text h1{
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  .wrapper{
+    padding: 0;
+  }
+  .hello .photo{
+    display: flex;
+    justify-content: center;
+  }
+  .hello .photo_text{
+    display: unset;
+  }
+  .hello-block footer .box{
+    display: flex;
+    flex-direction: column; 
+  }
+  .pnBtn.pBtn{
+    left: .2rem;
+  }
+  .pnBtn.nBtn{
+    right: .2rem;
+  }
+  .level1 .box,
+  .level2 .box,
+  .level3 .box,
+  .level4 .box,
+  .level5 .box,
+  .level6 .box,
+  .level7 .box,
+  .level8 .box,
+  .level9 .box{
+    margin-top: 0;
+  }
+  .box.r3 .text{
+    padding: .5rem;
+  }
+  #lesson1{
+    font-size: 1.5rem;
+  }
+  .startBtn{
+    width: unset;
+  }
+  #startGame{
+    padding: 1rem 4rem;
+  }
+  .downloadFake .upside .buttons img{
+    width: 1rem;
+    margin-right: .3rem;
+  }
+  .downloadFake .upside .line{
+    padding: .1rem .3rem;
+  }
+  .downloadFake .upside .line img{
+    width: 1rem;
+    margin-right: .2rem;
+  }
+  .downloadFake .content .left{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .downloadFake .content{
+    flex-direction: column;
+  }
+  .downloadFake .content .right .info .info_detail .key{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+  }
+  .downloadFake .content .right .info .info_detail{
+    flex-direction: column;
+  }
+  .downloadFake .content .right .info .info_detail .value{
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .downloadFake .content .right .fakeD button, .downloadFake .content .right .rightD button{
+    font-size: 1rem;
+  }
+  .downloadFake .content .right .fakeD{
+    font-size: unset;
+  }
+  .downloadFake .content .right .rightD button{
+    font-size: 1rem; 
+  }
+  .downloadFake .upside .line{
+    font-size: .5rem;
+  }
+  .downloadFake .content .left img{
+    width: 10rem;
+  }
+  #titles{
+    padding: 1rem .5rem;
+  }
+  #titles h1{
+    font-size: 1.4rem;
+  }
+  #titles .names{
+    padding: unset;
+    margin-top: 1rem;
+  }
+  #titles .names h2{
+    font-size: 1rem;
+  }
+}
+@media(min-width: 321px) and (max-width: 480px){
+  .logo img{
+    width: 2rem;
+  }
+  .hello-block header{
+    margin: 0 .2rem;
+  }
+  footer .box .text{
+    font-size: .6rem;
+    margin-top: .5rem;
+  }
+  .box{
+    margin: 1.4rem .2rem;
+  }
+  .logo{
+    padding: .3rem 2rem;
+  }
+  .hello .text{
+    font-size: 1rem;
+  }
+  .hello .text h1{
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  .wrapper{
+    padding: 0;
+  }
+  .hello .photo{
+    display: flex;
+    justify-content: center;
+  }
+  .hello .photo_text{
+    display: unset;
+  }
+  .hello-block footer .box{
+    display: flex;
+    flex-direction: column; 
+  }
+  .pnBtn.pBtn{
+    left: .2rem;
+  }
+  .pnBtn.nBtn{
+    right: .2rem;
+  }
+  .level1 .box,
+  .level2 .box,
+  .level3 .box,
+  .level4 .box,
+  .level5 .box,
+  .level6 .box,
+  .level7 .box,
+  .level8 .box,
+  .level9 .box{
+    margin-top: 0;
+  }
+  .box.r3 .text{
+    padding: .5rem;
+  }
+  #lesson1{
+    font-size: 1.5rem;
+  }
+  .startBtn{
+    width: unset;
+  }
+  #startGame{
+    padding: 1rem 4rem;
+  }
+  .downloadFake .upside .buttons img{
+    width: 1rem;
+    margin-right: .3rem;
+  }
+  .downloadFake .upside .line{
+    padding: .1rem .3rem;
+  }
+  .downloadFake .upside .line img{
+    width: 1rem;
+    margin-right: .2rem;
+  }
+  .downloadFake .content .left{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .downloadFake .content{
+    flex-direction: column;
+  }
+  .downloadFake .content .right .info .info_detail .key{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+  }
+  .downloadFake .content .right .info .info_detail{
+    flex-direction: column;
+  }
+  .downloadFake .content .right .info .info_detail .value{
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .downloadFake .content .right .fakeD button, .downloadFake .content .right .rightD button{
+    font-size: 1rem;
+  }
+  .downloadFake .content .right .fakeD{
+    font-size: unset;
+  }
+  .downloadFake .content .right .rightD button{
+    font-size: 1rem; 
+  }
+  .downloadFake .upside .line{
+    font-size: .5rem;
+  }
+  .downloadFake .content .left img{
+    width: 10rem;
+  }
+  #titles{
+    padding: 1rem .5rem;
+  }
+  #titles h1{
+    font-size: 1.4rem;
+  }
+  #titles .names{
+    padding: unset;
+    margin-top: 1rem;
+  }
+  #titles .names h2{
+    font-size: 1rem;
+  }
+}
+@media(min-width: 481px) and (max-width: 767px){
+  .logo img{
+    width: 2rem;
+  }
+  .hello-block header{
+    margin: 0 1rem;
+  }
+  footer .box .text{
+    font-size: .6rem;
+    margin-top: .5rem;
+  }
+  .box{
+    margin: 1.4rem 1rem;
+  }
+  .logo{
+    padding: .3rem 2rem;
+  }
+  .hello .text{
+    font-size: 1rem;
+  }
+  .hello .text h1{
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  .wrapper{
+    padding: 0;
+  }
+  .hello .photo{
+    display: flex;
+    justify-content: center;
+  }
+  .hello .photo_text{
+    display: unset;
+  }
+  .hello-block footer .box{
+    display: flex;
+    flex-direction: column; 
+  }
+  .pnBtn.pBtn{
+    left: 1rem;
+  }
+  .pnBtn.nBtn{
+    right: 1rem;
+  }
+  .level1 .box,
+  .level2 .box,
+  .level3 .box,
+  .level4 .box,
+  .level5 .box,
+  .level6 .box,
+  .level7 .box,
+  .level8 .box,
+  .level9 .box{
+    margin-top: 0;
+  }
+  .box.r3 .text{
+    padding: .5rem;
+  }
+  #lesson1{
+    font-size: 1.5rem;
+  }
+  .startBtn{
+    width: unset;
+  }
+  #startGame{
+    padding: 1rem 4rem;
+  }
+  .downloadFake .upside .buttons img{
+    width: 1rem;
+    margin-right: .3rem;
+  }
+  .downloadFake .upside .line{
+    padding: .1rem .3rem;
+  }
+  .downloadFake .upside .line img{
+    width: 1rem;
+    margin-right: .2rem;
+  }
+  .downloadFake .content .left{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .downloadFake .content{
+    flex-direction: column;
+  }
+  .downloadFake .content .right .info .info_detail .key{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+  }
+  .downloadFake .content .right .info .info_detail{
+    flex-direction: column;
+  }
+  .downloadFake .content .right .info .info_detail .value{
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .downloadFake .content .right .fakeD button, .downloadFake .content .right .rightD button{
+    font-size: 1rem;
+  }
+  .downloadFake .content .right .fakeD{
+    font-size: unset;
+  }
+  .downloadFake .content .right .rightD button{
+    font-size: 1rem; 
+  }
+  .downloadFake .upside .line{
+    font-size: 1rem;
+  }
+  .downloadFake .content .left img{
+    width: 10rem;
+  }
+  #titles{
+    padding: 1rem .5rem;
+  }
+  #titles h1{
+    font-size: 1.4rem;
+  }
+  #titles .names{
+    padding: unset;
+    margin-top: 1rem;
+  }
+  #titles .names h2{
+    font-size: 1rem;
+  }
+}
+@media(min-width: 768px) and (max-width: 960px){
+  .hello-block header{
+    margin: 0 1rem;
+  }
+  footer .box .text{
+    font-size: 1rem;
+  }
+  .box{
+    margin: 1.4rem 1rem;
+  }
+  .logo{
+    padding: .3rem 2rem;
+  }
+  .hello .text{
+    font-size: 1rem;
+  }
+  .hello .text h1{
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  .wrapper{
+    padding: 0;
+  }
+  .hello .photo{
+    display: flex;
+    justify-content: center;
+  }
+  .pnBtn.pBtn{
+    left: 1rem;
+  }
+  .pnBtn.nBtn{
+    right: 1rem;
+  }
+  .level1 .box,
+  .level2 .box,
+  .level3 .box,
+  .level4 .box,
+  .level5 .box,
+  .level6 .box,
+  .level7 .box,
+  .level8 .box,
+  .level9 .box{
+    margin-top: 0;
+  }
+  .box.r3 .text{
+    padding: .5rem;
+  }
+  #lesson1{
+    font-size: 1.5rem;
+  }
+  .startBtn{
+    width: unset;
+  }
+  #startGame{
+    padding: 1rem 4rem;
+  }
+  .downloadFake .upside .buttons img{
+    width: 1.5rem;
+    margin-right: .3rem;
+  }
+  .downloadFake .upside .line{
+    padding: .1rem .3rem;
+  }
+  .downloadFake .upside .line img{
+    width: 1.5rem;
+    margin-right: .2rem;
+  }
+  .downloadFake .content .left{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3rem;
+  }
+  .downloadFake .content .right .info .info_detail .key{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+  }
+  .downloadFake .content .right .info .info_detail{
+    flex-direction: column;
+  }
+  .downloadFake .content .right .info .info_detail .value{
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .downloadFake .content .right .fakeD button, .downloadFake .content .right .rightD button{
+    font-size: 1rem;
+  }
+  .downloadFake .content .right .fakeD{
+    font-size: unset;
+  }
+  .downloadFake .content .right .rightD button{
+    font-size: 1rem; 
+  }
+  .downloadFake .upside .line{
+    font-size: 1.5rem;
+  }
+  .downloadFake .content .left img{
+    width: 10rem;
+  }
+  #titles{
+  }
+  #titles h1{
+    font-size: 1.4rem;
+  }
+  #titles .names{
+    padding: unset;
+    margin-top: 1rem;
+  }
+  #titles .names h2{
+    font-size: 1rem;
+  }
+}
+@media(min-width: 961px){
+}

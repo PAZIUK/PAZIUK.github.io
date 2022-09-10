@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+
+
+:root{
+    --color-1: #004fe8;
+	--color-2: #251D3A;
+	--color-3: #EF4565;
+	--color-4: #90B4CE;
+	--color-5: #FFFFFE;
+    --color-6: #b1f0f2;
+    --color-7: #3DA9FC;
+    --color-8: #094067;
+
+    --font-1: 'Dosis', sans-serif;
+    --font-2: 'Montserrat', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+main{
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+a, button{
+    transition: all .5s ease;
+    text-decoration: none;
+}
+a:hover, button:hover{
+    transform: translate(.2rem,-.2rem);
+}
+
+header{
+    background-color: var(--color-1);
+    z-index: 10;
+    padding: .5rem 0;
+}
+header .container nav{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+header .container nav a.navbar-brand{
+    text-decoration: none;
+    color: var(--color-5);
+    font-family: var(--font-1);
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 500;
+    padding: .2rem;
+    border-radius: 50%;
+    background-color: var(--color-5);
+}
+header .container nav a.navbar-brand:hover,
+footer .container a.logo{
+    transform: translate(0);
+}
+header .container nav a.navbar-brand img{
+    width: 2.5rem;
+} 
+header .container nav ul.menu{
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+header .container nav ul.menu li:not(:first-child){
+    margin-left: 4rem;
+}
+header .container nav ul.menu li{
+    display: flex;
+    align-items: center;
+}
+header .container nav ul.menu li a{
+    text-decoration: none;
+    color: var(--color-5);
+    font-size: 1.2rem;
+    font-family: var(--font-2);
+}
+header .container nav ul.menu li a.main{
+    padding: .5rem 1.5rem;
+    background-color: var(--color-5);
+    color: var(--color-2);
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+section.hello{
+    background-image: url("../img/config/hello.jpeg");
+    background-size: cover;
+    background-position: center;
+    min-height: 90vh;
+    position: relative;
+    display: flex;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 75% 93%, 0 100%, 0 0);
+    clip-path: polygon(100% 0, 100% 100%, 75% 93%, 0 100%, 0 0);
+}
+section.hello::after,
+section.getGuide::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(22, 30, 42, 0.41);
+    z-index: 1;
+}
+section.hello .container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex: 1 1 auto;
+    z-index: 2;
+}
+section.hello .container .title{
+    font-size: 4rem;
+    color: var(--color-5);
+    font-family: var(--font-2);
+    font-weight: 600;
+}
+section.hello .container .desc{
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    font-family: var(--font-1);
+    color: var(--color-5);
+}
+a.btnLink{
+    padding: .5rem 1.5rem;
+    background-color: var(--color-1);
+    color: var(--color-5);
+    font-size: 1.3rem;
+    font-family: var(--font-2);
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+section.understanding,
+section.testimonials{
+    padding: 3rem 0;
+}
+section.understanding .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section.understanding .container .title,
+section.testimonials .container .title{
+    font-family: var(--font-2);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.6rem;
+}
+section.understanding .container .blocks{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);   
+    grid-gap: 1rem;
+}
+section.understanding .container .blocks .block{
+    display: flex;
+    flex-direction: column;
+}
+section.understanding .container .blocks .block .photo{
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+section.understanding .container .blocks .block .photo img{
+    max-height: 10rem;
+}
+section.understanding .container .blocks .block .info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section.understanding .container .blocks .block .info__title{
+    font-family: var(--font-2);
+    font-weight: 600;
+    margin-bottom: .5rem;
+    text-align: center;
+}
+section.understanding .container .blocks .block .info__desc{
+    font-family: var(--font-2);
+    text-align: center;
+    margin: 0;
+}
+
+section.getGuide{
+    padding: 3rem 0;
+    background-image: url("../img/config/guide.jpeg");
+    background-position: center;
+    background-size: cover;
+    -webkit-clip-path: polygon(0 0, 25% 7%, 100% 0, 100% 93%, 50% 100%, 0 93%);
+    clip-path: polygon(0 0, 25% 7%, 100% 0, 100% 93%, 50% 100%, 0 93%);
+    height: 90vh;
+    display: flex;
+    position: relative;
+}
+section.getGuide .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+    z-index: 2;
+}
+section.getGuide .container .photo{
+    flex: 1;
+}
+section.getGuide .container .photo img{
+    width: 100%;
+}
+section.getGuide .container .info{
+    flex:2;
+    margin-left: 4rem;
+    text-align: center;
+}
+section.getGuide .container .info .title{
+    font-family: var(--font-2);
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: var(--color-5);
+    margin-bottom: 1.5rem;
+}
+section.getGuide .container .info span{
+    color: var(--color-6);
+}
+section.getGuide .container .info .desc{
+    color: var(--color-5);
+    font-size: 1.2rem;
+    font-family: var(--font-2);
+}
+section.getGuide .container .info a{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+section.testimonials .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section.testimonials .container .title{
+    margin-bottom: 1rem;
+}
+section.testimonials .container .subtitle{
+    color: var(--color-8);
+    font-family: var(--font-2);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+section.testimonials .container .reviews{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1rem;
+}
+section.testimonials .container .reviews .review{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section.testimonials .container .reviews .review .photo{
+    margin-bottom: 2rem;
+}
+section.testimonials .container .reviews .review .photo img{
+    height: 5rem;
+}
+section.testimonials .container .reviews .review .desc{
+    display: flex;
+    flex-direction: column;
+}
+section.testimonials .container .reviews .review .name{
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: var(--font-2);
+    text-align: center;
+}
+section.testimonials .container .reviews .review .text{
+    text-align: center;
+    font-family: var(--font-2);
+}
+
+footer{
+    background-color: var(--color-2);
+    color: var(--color-5);
+    padding: 1rem 0;
+}
+footer .container{
+    display: flex;
+    justify-content: space-between;
+}
+footer .container a.logo{
+    color: var(--color-5);
+    font-family: var(--font-2);
+}
+footer .container a.logo img{
+    width: 3rem;
+    margin-right: 1rem;
+}
+footer .container ul.media{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+footer .container ul.media li:not(:first-child){
+    margin-left: 1rem;
+}
+footer .container ul.media li{
+    display: flex;
+}
+footer .container ul.media li a img{
+    width: 2rem;
+}   

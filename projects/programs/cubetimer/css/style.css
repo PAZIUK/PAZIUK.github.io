@@ -1,0 +1,68 @@
+body{
+    background-color: #00c2ff;
+    /* animation: 10s linear 0s infinite alternate back; */
+    background-image: url("../img/unknown2.png");
+    background-size: cover;
+}
+.container{
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+.container .left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container .left .photo{
+    width: 100%;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+}
+.container .left figure img{
+    width: 8rem;
+}
+.container .left .sub-container{
+    padding: 5rem 1rem 2rem 1rem;
+    transform: translate(0,-3rem);
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 0 0 30px 30px;
+}
+.container .left .sub-container p.main{
+    background-color: #0018ff;
+    color: white;
+    padding: .3rem .4rem;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0 auto;
+}
+.container .left .sub-container .scramble{
+    padding: 1rem 0;
+    background-color: white;
+    color: black;
+    font-size: 1.5rem;
+    border-radius: 0 0 10px 10px;
+}
+.container .left .sub-container .scramble div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container .left .sub-container .scramble .code{
+    margin: 0 auto;
+}
+/* @keyframes back{
+    0%{
+        background-color: #00c2ff;
+    }
+    50%{
+        background-color: #ff0000;
+    }
+    100%{
+        background-color: #d3ff00;
+    }
+} */

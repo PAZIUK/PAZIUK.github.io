@@ -1,0 +1,101 @@
+body{
+	margin: 0;
+	width: 100vw;
+	min-height: 100vh;
+	overflow-x: hidden;
+	box-sizing: border-box;
+	background-color: #f6f6f6;
+}
+.calculator{
+	width: 20rem;
+	margin: 0 auto;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+.out{
+	width: 100%;
+	height: 40vh;
+	background-color: white;
+}
+.btns{
+	height: 60vh;
+	width: 100%;
+	display: grid;
+	flex-direction: column;
+	grid-template-rows: repeat(5,1fr);
+	background-color: #2d3134;
+	grid-template-areas: 
+	"C C procent dilennya"
+	"n7 n8 n9 mnogennya"
+	"n4 n5 n6 minus"
+	"n1 n2 n3 plus"
+	"o o comma ecuals";
+	grid-gap: 1px;
+}
+.btns button{
+	cursor: pointer;
+	border-radius: 0px;
+	border: none;
+	background-color: #1f2330;
+	font-size: 2rem;
+	color: white;
+	width: 100%;
+}
+
+button.C{
+	grid-area: C;
+}
+button.procent{
+	grid-area: procent;
+}
+button.mnogennya{
+	grid-area: mnogennya;
+	background-color: #5f4ab6;
+}
+button.minus{
+	grid-area: minus;
+	background-color: #5f4ab6;
+}
+button.plus{
+	grid-area: plus;
+	background-color: #5f4ab6;
+}
+button.dilennya{
+	grid-area: dilennya;
+	background-color: #5f4ab6;
+}
+button.ecuals{
+	grid-area: ecuals;
+	background-color: #ffc207;
+}
+button.n9{
+	grid-area: "n9";
+}
+button.n8{
+	grid-area: "n8";
+}
+button.n7{
+	grid-area: "n7";
+}
+button.n6{
+	grid-area: "n6";
+}
+button.n5{
+	grid-area: "n5";
+}
+button.n4{
+	grid-area: "n4";
+}
+button.n3{
+	grid-area: "n3";
+}
+button.n2{
+	grid-area: "n2";
+}
+button.n1{
+	grid-area: "n1";
+}
+button.n0{
+	grid-area: o;
+}
