@@ -25,16 +25,16 @@ let PASSWORDKeys = Object.keys(PASSWORDS);
 let PASSWORDValues = Object.values(PASSWORDS);
 
 function checkPassword(btn) {
-  let PASSWORD = btn.parentElement.querySelector("input").value;
+  let PASSWORD = btn.parentElement.parentElement.querySelector("input").value;
   let nameOfClass = Object.values(PASSWORDS)[PASSWORDKeys.indexOf(PASSWORD)]
   localStorage.setItem("nameOfClass",nameOfClass)
   if (PASSWORDKeys.includes(PASSWORD)) {
     localStorage.setItem('classCode', PASSWORD);
     window.location.href = `classes/${PASSWORD}/nav.html`;
   } else {
-    btn.parentElement.querySelector(".errorText").classList.add("active")
+    btn.parentElement.parentElement.querySelector(".errorText").classList.add("active")
     setTimeout(() => {
-      btn.parentElement.querySelector(".errorText").classList.remove("active");
+      btn.parentElement.parentElement.querySelector(".errorText").classList.remove("active");
     }, 2000);
   }
 }
@@ -52,6 +52,7 @@ function settings() {
     setTimeout(() => {
       document.querySelector(".PASSWORD input").classList.add("active")
       document.querySelector(".PASSWORD button").classList.add("active")
+      document.querySelector(".PASSWORD a").classList.add("active")
     }, 200)
     let input = document.querySelector(".PASSWORD input");
     if(input.value.length>0){
