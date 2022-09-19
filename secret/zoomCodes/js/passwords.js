@@ -19,6 +19,9 @@ let PASSWORDS = {
   // "48523": "12-Г КЛАС",
 }
 
+let VERSION = "3.3"
+addVersion();
+
 
 let PASSWORDKeys = Object.keys(PASSWORDS);
 let PASSWORDValues = Object.values(PASSWORDS);
@@ -100,3 +103,10 @@ if (localStorage.getItem('classCode')) {
   
 }
 
+
+function addVersion(){
+  document.querySelector(".version").textContent = `V${VERSION}`;
+  if(!localStorage.getItem("siteVersion")){
+    localStorage.setItem("siteVersion",VERSION)
+  }
+}

@@ -75,6 +75,8 @@ const TEACHERS = {
   //id 37
   "Зубик Ніна Миколаївна": "https://us04web.zoom.us/j/8651028608?pwd=U3lDTWpOK0Y2Nk85eWt6b0hLM2ZDUT09",
   //id 38
+  "Остапович Ірина Миколаївна": "",
+  //id 39
   "Прізвище Ім'я По-Батькові": "https://us05web.zoom.us/j/4791491048?pwd=dHlTdTcrSkRwK3VTRFNHVzJxWCtuUT09",
 }
 
