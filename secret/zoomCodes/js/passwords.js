@@ -2,7 +2,7 @@
 
 import PASSWORDS from './passwordsImportFile.js';
 
-let VERSION = "3.3"
+let VERSION = "3.3.1"
 addVersion();
 
 
