@@ -108,3 +108,53 @@ function addHeightProperty() {
     item.querySelector(".btn img.btnImg").style.top = marginForImg + "px";
   })
 }
+
+const schedule = {
+  1: [["09:00:00"],["09:30:00"]],
+  2: [["09:45:00"],["10:15:00"]],
+  3: [["10:30:00"],["11:00:00"]],
+  4: [["11:15:00"],["11:45:00"]],
+  5: [["12:00:00"],["12:30:00"]],
+  6: [["12:45:00"],["13:15:00"]],
+  7: [["13:30:00"],["14:00:00"]],
+}
+
+function checkTime (start, end, hours, minutes, seconds){
+  let s = 60,
+      d = ':',
+      b = start.split(d);
+      b = b[0]* s * s + b [1] * s + +b[2];
+  let e = end.split(d);
+      e = e[0]* s * s + e [1] * s + +e[2];
+  let t = hours * s * s + minutes * s + seconds;
+
+  return (t >= b && t <= e);
+}
+
+function findLesson(){
+  let lessonNumber = 0;
+  for (let i = 0; i < Object.keys(schedule).length; i++) {
+    let start = Object.values(schedule)[i][0].join("");
+    let end = Object.values(schedule)[i][1].join("");
+    let date = new Date();
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+    let seconds = date.getSeconds();
+    if(checkTime(start, end, hours, minutes, seconds)){
+      lessonNumber = Object.keys(schedule)[i];
+    }
+  }
+  return lessonNumber;
+}
+
+function showWhatLesson(){
+  let lessonNumber = findLesson()+""
+  let lessonButtons = document.querySelectorAll(".btns .lesson .btn .lessonNumber")
+  lessonButtons.forEach(item=>{
+    if(item.textContent.split(".")[0]==lessonNumber){
+      item.parentElement.classList.add('showLesson')
+    }
+  })
+}
+
+setTimeout(showWhatLesson, 2900)
