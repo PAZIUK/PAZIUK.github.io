@@ -140,13 +140,33 @@ function findLesson(){
 }
 
 function showWhatLesson(){
-  let lessonNumber = findLesson()+""
-  let lessonButtons = document.querySelectorAll(".btns .lesson .btn .lessonNumber")
-  lessonButtons.forEach(item=>{
-    if(item.textContent.split(".")[0]==lessonNumber){
-      item.parentElement.classList.add('showLesson')
+  if(new Date().getDay() == getDayNumber()){
+    let lessonNumber = findLesson()+""
+    let lessonButtons = document.querySelectorAll(".btns .lesson .btn .lessonNumber")
+    lessonButtons.forEach(item=>{
+      if(item.textContent.split(".")[0]==lessonNumber){
+        item.parentElement.classList.add('showLesson')
+      }
+    }) 
+  }
+}
+
+function getDayNumber(){
+  let dayNumber = 0;
+  let days = {
+    1:"ПОНЕДІЛОК",
+    2:"ВІВТОРОК",
+    3:"СЕРЕДА",
+    4:"ЧЕТВЕР",
+    5:"П'ЯТНИЦЯ"
+  }
+  let day = document.querySelector(".classInfo .name").textContent;
+  for (let i = 0; i < Object.keys(days).length; i++) {
+    if(Object.values(days)[i]==day){
+      dayNumber = Object.keys(days)[i]
     }
-  })
+  }
+  return dayNumber;
 }
 
 setTimeout(showWhatLesson, 2900)
