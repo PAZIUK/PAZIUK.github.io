@@ -20,7 +20,7 @@ let PASSWORDS = {
   // "48523": "12-Г КЛАС",
 }
 
-let VERSION = "3.3.1"
+let VERSION = "3.3.4"
 addVersion();
 
 
