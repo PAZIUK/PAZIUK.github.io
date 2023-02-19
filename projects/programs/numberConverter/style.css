@@ -98,6 +98,8 @@ ul.list li{
 	box-sizing: border-box;
 	font-weight: bold;
 	white-space: pre-wrap;
+	resize: vertical;
+	max-height: 100px;
 }
 .error{
 	position: absolute;
@@ -114,7 +116,7 @@ ul.list li{
 	color: red;
 	font-weight: bold;
 	font-size: 2rem;
-	transform: translate(0,500%);
+	transform: translate(0,-500%);
 }
 .error.active{
 	transform: translate(0);

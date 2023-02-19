@@ -1,6 +1,6 @@
 let lessonsLength = +prompt("How many lessons do you have each day?");
 let start = prompt("When does the first lesson begin?");
-let howMuch = +prompt("How long do the lessons last?");
+let howMuch = +prompt("How long is a class lesson?");
 let timeout = +prompt("How long are the breaks between lessons?");
 let end = document.querySelectorAll(".endLesson");
 

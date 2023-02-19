@@ -1,5 +1,4 @@
 "use strict"
-
 let showFromIt = document.querySelector("ul.from");
 let showToIt = document.querySelector("ul.to");
 let nosf = document.querySelector(".nosf");

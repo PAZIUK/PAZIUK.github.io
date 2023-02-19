@@ -1,49 +1,20 @@
-function submit() {
+"use strict"
+
+document.querySelector("#submit").addEventListener("click",()=>{
+  let result = document.querySelector('#result');
   let items = document.querySelector("#input").value;
+  let checkbox = document.querySelector("#checkbox");
   if (items.length == 0) {
-    result.innerHTML = "error";
+    result.innerHTML = "Enter a list!";
   } else {
-    let result = document.querySelector('#result');
-    let checkbox = document.querySelector("#checkbox");
     items = items.split(",");
-    let random;
-    if (items.length<=10) {
-      random = Math.floor(Math.random()*10);
-    } else if(items.length<=100){
-      random = Math.floor(Math.random()*100);
-    } else if(items.length<=1000){
-      random = Math.floor(Math.random()*1000);
-    } else if(items.length>1000){
-      random = Math.floor(Math.random()*10000);
-    } 
-    for (let i = 0; i < items.length; i++) {
-      if(typeof(items[random]) == "undefined"){
-        while(typeof(items[random]) == "undefined"){
-          if (items.length<=10) {
-            random = Math.floor(Math.random()*10);
-          } else if(items.length<=100){
-            random = Math.floor(Math.random()*100);
-          } else if(items.length<=1000){
-            random = Math.floor(Math.random()*1000);
-          } else if(items.length>1000){
-            random = Math.floor(Math.random()*10000);
-          } 
-        }
-      } 
-    }
+    let random = Math.floor(Math.random() * items.length);
     result.innerHTML = items[random];
     if(checkbox.checked){
-      items.splice(random, 1);
-      for (let i = 0; i < items.length; i++) {
-        document.querySelector("#input").value = "";
-        document.querySelector("#input").value += items;
-      }
-      if (items.length == 0) {
-        document.querySelector("#input").value = "";
-      }
-      console.log(items)
+      [items[random],items[items.length-1]] = [items[items.length-1],items[random]]
+      items.pop()
+      document.querySelector("#input").value = items.join()
     }
     items = items;
   }
-  
-}
+})
