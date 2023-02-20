@@ -1,0 +1,13 @@
+{
+    "name": "What a Number",
+    "short_name": "What a Number",
+    "icons": [
+        {
+            "src": "/android-chrome-48x48.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff"
+}

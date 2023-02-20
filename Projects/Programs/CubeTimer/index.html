@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CubeTimer</title>
+
+        <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+        <link rel="manifest" href="img/favicons/site.webmanifest">
+        <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#2b5797">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="photo"><figure><img src="img/download.jpg" alt=""></figure></div>
+            <div class="sub-container">
+                <div class="left">
+                    <p class="hat">Scramble</p>
+                    <div class="scramble">
+                        <div class="code"></div>
+                    </div>
+                    <p class="hat">Timer</p>
+                    <div class="timer">
+                        <div class="minutes">00</div>
+                        <span>:</span>
+                        <div class="seconds">00</div>
+                        <span>.</span>
+                        <div class="miliseconds">00</div>
+                    </div>
+                </div>
+                <div class="right">
+                    <p class="hat">Results</p>
+                    <div class="result">
+                        <div class="result_best result_resultsBlock resultsBlock">
+                            <div class="resultsBlock_head">
+                                <h4 class="resultsBlock_title">The best results</h4>
+                            </div>
+                            <div class="resultsBlock_body">
+                                <div class="resultsBlock_resultBlock resultBlock" id="place-1">
+                                    <div class="resultBlock_photo"><img src="img/assets/1st-place-medal.png"/></div>
+                                    <div class="resultBlock_time">
+                                        <div class="resultBlock_datetime">There is no data</div>
+                                        <div class="resultBlock_resulttime resultBlock_resulttime_1">----------</div>
+                                    </div>
+                                    <div class="resultBlock_remove"><img src="img/assets/close.png"/></div>
+                                </div>
+                                <div class="resultsBlock_resultBlock resultBlock" id="place-2">
+                                    <div class="resultBlock_photo"><img src="img/assets/2nd-place-medal.png"/></div>
+                                    <div class="resultBlock_time">
+                                        <div class="resultBlock_datetime">There is no data</div>
+                                        <div class="resultBlock_resulttime resultBlock_resulttime_2">----------</div>
+                                    </div>
+                                    <div class="resultBlock_remove"><img src="img/assets/close.png"/></div>
+                                </div>
+                                <div class="resultsBlock_resultBlock resultBlock" id="place-3">
+                                    <div class="resultBlock_photo"><img src="img/assets/3rd-place-medal.png"/></div>
+                                    <div class="resultBlock_time">
+                                        <div class="resultBlock_datetime">There is no data</div>
+                                        <div class="resultBlock_resulttime resultBlock_resulttime_3">----------</div>
+                                    </div>
+                                    <div class="resultBlock_remove"><img src="img/assets/close.png"/></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="result_other result_resultsBlock resultsBlock">
+                            <div class="resultsBlock_head">
+                                <h4 class="resultsBlock_title">Other results</h4>
+                            </div>
+                            <div class="resultsBlock_body"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/js.js"></script>
+    </body>
+</html>
