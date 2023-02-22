@@ -27,7 +27,7 @@ const snake = {
   dx: 0,
   dy: config.sizeCell,
   tails: [],
-  maxTails: 70
+  maxTails: 3
 }
 
 let berry = {
@@ -126,7 +126,7 @@ function refreshGame() {
   drawScore();
 
   snake.tails = [];
-  snake.maxTails = 70;
+  snake.maxTails = 3;
   snake.x = -160;
   snake.y = -16;
   snake.dx = 0;
@@ -146,8 +146,7 @@ function randomPositionBerry() {
 }
 
 function incScore() {
-  // score++;
-  score+=69
+  score++;
   drawScore();
   if(sound){
     eat.play();
@@ -160,8 +159,7 @@ function drawScore() {
   if (localStorage.getItem('record') === null) {
     localStorage.setItem("record", 0);
   }
-  // record = localStorage.getItem("record");
-  record = 69
+  record = localStorage.getItem("record");
   recordBlock.innerHTML = "Record: " + record;
   if (score >= record) {
     recordBlock.innerHTML = "Record: " + score;

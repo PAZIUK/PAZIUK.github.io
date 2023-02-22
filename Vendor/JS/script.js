@@ -132,3 +132,7 @@ if(technologies){
 		item.querySelector(".body .moreBlock").style.top = "-"+item.querySelector(".body .moreBlock").offsetHeight+"px"
 	})
 }
+
+document.addEventListener("DOMContentLoaded",function(){
+	document.querySelector("#year").textContent = new Date().getFullYear()
+})
