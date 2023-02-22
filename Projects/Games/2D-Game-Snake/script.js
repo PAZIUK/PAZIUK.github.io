@@ -22,7 +22,7 @@ function snakeStyleBerry() {
   let berry = document.querySelector('#berry').value;
   berryStyle.style.backgroundColor = berry;
 };
-function refresh() {
+document.querySelector("#refresh").addEventListener("click",function(){
   let head = document.querySelector('#head');
   let berry = document.querySelector('#berry');
   let tail = document.querySelector('#tail');
@@ -32,7 +32,7 @@ function refresh() {
   snakeStyleHead();
   snakeStyleTail();
   snakeStyleBerry();
-}
+})
 function gameShow() {
   if(document.querySelector('#nickname').value.length == 0){
     document.querySelector('#nickname').placeholder = "You not writed your nickname";

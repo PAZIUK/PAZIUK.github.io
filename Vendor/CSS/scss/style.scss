@@ -17,7 +17,7 @@ body {
   min-height: 100vh;
   box-sizing: border-box;
   overflow: hidden;
-  background-image: url("../img/BACKGROUND.jpg");
+  background-image: url("/Vendor/Images/Assets/Background.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -238,7 +238,7 @@ section {
   .container {
     position: relative;
     z-index: 1;
-    padding: 3.5rem 0 3rem;
+    padding: 5rem 0 3rem;
   }
 
   &.about {
