@@ -1,5 +1,5 @@
 "use strict"
-localStorage.removeItem("classCode")
+let code = localStorage.getItem("classCode")
 if(code){
   window.location.href = `http://zozrozklad.zzz.com.ua/view/class/${code}/navigation`
 } else {
