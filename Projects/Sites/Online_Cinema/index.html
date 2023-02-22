@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>JulieMeo</title>
+
+  <!-- Main Style -->
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+
+  <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/png"> 
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"> 
+  <link rel="apple-touch-icon" sizes="76x76" href="img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="manifest" href="img/site.webmanifest">
+  <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#2b5797">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+  <header>
+    <div class="header">
+      <div class="logo">
+        <a href="/">
+          <img src="img/logo.png" alt="Logo">
+          <span>JulieMeo</span>
+        </a>
+      </div>
+      <nav>
+        <ul class="nav">
+          <li><a href="#">FILMS</a></li>
+          <li><a href="#">CARTOONS</a></li>
+          <li><a href="#">SERIALS</a></li>
+          <li><a href="#">RATINGS</a></li>
+          <li><a href="#">TOP 100</a></li>
+        </ul>
+      </nav>
+      <div class="search">
+        <input type="text">
+        <button type="submit"><img width="30" src="https://img.icons8.com/ios/50/000000/search--v1.png"/></button>
+      </div>
+      <div class="mobile-bar" onclick="toggle();">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrapper">
+      <div class="toggleMenu">
+        <ul class="nav">
+          <li><a href="#">FILMS</a></li>
+          <li><a href="#">CARTOONS</a></li>
+          <li><a href="#">SERIALS</a></li>
+          <li><a href="#">RATINGS</a></li>
+          <li><a href="#">NEWS</a></li>
+          <li><a href="#">TOP</a></li>
+        </ul>
+        <div class="search">
+          <input type="text">
+          <button type="submit"><img width="30" src="https://img.icons8.com/ios/50/000000/search--v1.png"/></button>
+        </div>
+      </div>
+      <section class="banner">
+        <div class="title">
+          <h2 style="font-family: 'Londrina Solid', cursive;">JulieMeo</h2>
+        </div>
+        <div class="description">
+          Drama, thriller, fantastic, interesting?
+        </div>
+      </section> 
+
+      <section class="film">
+        <div class="film_content">
+          <div class="film_poster">
+            <img src="img/poster-1.jpg" alt="Poster">
+            <div class="hd"><img src="img/hd.png"/></div>
+          </div>
+          <div class="desc_film">
+            <div class="cat">
+              <p>MOST VIEWED FILM</p>
+            </div>
+            <h2>Fast & Furious 6</h2>
+            <p>Fast & Furious 6 is a 2013 American action. It is the sequel to Fast Five (2011) and the sixth installment in the Fast & Furious franchise.</p>
+            <a href="#" class="watch">WATCH</a>
+          </div>
+        </div>
+        <div class="film_content">
+          <div class="film_poster">
+            <img src="img/poster-2.jpg" alt="Poster">
+            <div class="hd"><img src="img/hd.png"/></div>
+          </div>
+          <div class="desc_film">
+            <div class="cat">
+              <p>MOST RATING FILM</p>
+            </div>
+            <h2>AVENGERS</h2>
+            <p>The Avengers is a 2012 American superhero film based on the Marvel Comics superhero team of the same name. Produced by Marvel Studios.</p>
+            <a href="#" class="watch">WATCH</a>
+          </div>
+        </div>
+        <div class="film_content">
+          <div class="film_poster">
+            <img src="img/poster-3.jpg" alt="Poster">
+            <div class="hd"><img src="img/hd.png"/></div>
+          </div>
+          <div class="desc_film">
+            <div class="cat">
+              <p>MOST COMMENT FILM</p>
+            </div>
+            <h2>DISTRICT 13</h2>
+            <p>District 13 is a 2004 French action film. The film is notable for its depiction of parkour in a number of stunt sequences that were completed without the use of wires or computer generated effects.</p>
+            <a href="#" class="watch">WATCH</a>
+          </div>
+        </div>
+        <div class="film_content">
+          <div class="film_poster">
+            <img src="img/poster-4.jpg" alt="Poster">
+            <div class="hd"><img src="img/hd.png"/></div>
+          </div>
+          <div class="desc_film">
+            <div class="cat">
+              <p>THE MOST TOUCHING FILM</p>
+            </div>
+            <h2>TITANIC</h2>
+            <p>Titanic is a 1997 American epic romance. Incorporating both historical and fictionalized aspects, it is based on accounts of the sinking of the RMS Titanic, and stars Leonardo DiCaprio and Kate Winslet.</p>
+            <a href="#" class="watch">WATCH</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="new">
+        <div class="new_title">
+          <h2>New Films</h2>
+        </div>
+        <div class="new_content">
+          <div class="new_box">
+            <div class="film_title">
+              <h3>COOLEY HIGH</h3>
+            </div>
+            <div class="img">
+              <img src="img/films/1.png" alt="New film">
+              <div class="sub-img">
+                <img src="img/hd.png"/>
+                <img src="img/new.png"/>
+              </div>
+            </div>
+            <div class="desc_text">
+              <div class="desc-part">
+                <span>YEAR</span>
+                <span>1995</span>
+              </div>
+              <div class="desc-part">
+                <span>RATING</span>
+                <span>9.9</span>
+              </div>
+              <a href="#" class="watch">WATCH</a>
+            </div>
+          </div>
+          <div class="new_box">
+            <div class="film_title">
+              <h3>Must Kill Karl</h3>
+            </div>
+            <div class="img">
+              <img src="img/films/2.png" alt="New film">
+              <div class="sub-img">
+                <img src="img/hd.png"/>
+                <img src="img/new.png"/>
+              </div>
+            </div>
+            <div class="desc_text">
+              <div class="desc-part">
+                <span>YEAR</span>
+                <span>2016</span>
+              </div>
+              <div class="desc-part">
+                <span>RATING</span>
+                <span>9.8</span>
+              </div>
+              <a href="#" class="watch">WATCH</a>
+            </div>
+          </div>
+          <div class="new_box">
+            <div class="film_title">
+              <h3>WALL-E</h3>
+            </div>
+            <div class="img">
+              <img src="img/films/3.png" alt="New film">
+              <div class="sub-img">
+                <img src="img/hd.png"/>
+                <img src="img/new.png"/>
+              </div>
+            </div>
+            <div class="desc_text">
+              <div class="desc-part">
+                <span>YEAR</span>
+                <span>2008</span>
+              </div>
+              <div class="desc-part">
+                <span>RATING</span>
+                <span>9.7</span>
+              </div>
+              <a href="#" class="watch">WATCH</a>
+            </div>
+          </div>
+          <div class="new_box">
+            <div class="film_title">
+              <h3>Frozen II</h3>
+            </div>
+            <div class="img">
+              <img src="img/films/4.png" alt="New film">
+              <div class="sub-img">
+                <img src="img/hd.png"/>
+                <img src="img/new.png"/>
+              </div>
+            </div>
+            <div class="desc_text">
+              <div class="desc-part">
+                <span>YEAR</span>
+                <span>2019</span>
+              </div>
+              <div class="desc-part">
+                <span>RATING</span>
+                <span>9.6</span>
+              </div>
+              <a href="#" class="watch">WATCH</a>
+            </div>
+          </div>
+          <div class="new_box">
+            <div class="film_title">
+              <h3>FORD v FERRARI</h3>
+            </div>
+            <div class="img">
+              <img src="img/films/5.png" alt="New film">
+              <div class="sub-img">
+                <img src="img/hd.png"/>
+                <img src="img/new.png"/>
+              </div>
+            </div>
+            <div class="desc_text">
+              <div class="desc-part">
+                <span>YEAR</span>
+                <span>2019</span>
+              </div>
+              <div class="desc-part">
+                <span>RATING</span>
+                <span>9.5</span>
+              </div>
+              <a href="#" class="watch">WATCH</a>
+            </div>
+          </div>
+          <div class="new_box">
+            <div class="film_title">
+              <h3>The Mummy</h3>
+            </div>
+            <div class="img">
+              <img src="img/films/6.png" alt="New film">
+              <div class="sub-img">
+                <img src="img/hd.png"/>
+                <img src="img/new.png"/>
+              </div>
+            </div>
+            <div class="desc_text">
+              <div class="desc-part">
+                <span>YEAR</span>
+                <span>1999</span>
+              </div>
+              <div class="desc-part">
+                <span>RATING</span>
+                <span>9.4</span>
+              </div>
+              <a href="#" class="watch">WATCH</a>
+            </div>
+          </div>
+          <div class="new_box">
+            <div class="film_title">
+              <h3>JAWS</h3>
+            </div>
+            <div class="img">
+              <img src="img/films/7.png" alt="New film">
+              <div class="sub-img">
+                <img src="img/hd.png"/>
+                <img src="img/new.png"/>
+              </div>
+            </div>
+            <div class="desc_text">
+              <div class="desc-part">
+                <span>YEAR</span>
+                <span>1975</span>
+              </div>
+              <div class="desc-part">
+                <span>RATING</span>
+                <span>9.3</span>
+              </div>
+              <a href="#" class="watch">WATCH</a>
+            </div>
+          </div>
+          <div class="new_box">
+            <div class="film_title">
+              <h3>TRICK</h3>
+            </div>
+            <div class="img">
+              <img src="img/films/8.png" alt="New film">
+              <div class="sub-img">
+                <img src="img/hd.png"/>
+                <img src="img/new.png"/>
+              </div>
+            </div>
+            <div class="desc_text">
+              <div class="desc-part">
+                <span>YEAR</span>
+                <span>2019</span>
+              </div>
+              <div class="desc-part">
+                <span>RATING</span>
+                <span>9.2</span>
+              </div>
+              <a href="#" class="watch">WATCH</a>
+            </div>
+          </div>
+          <div class="new_box">
+            <div class="film_title">
+              <h3>ANT-MAN</h3>
+            </div>
+            <div class="img">
+              <img src="img/films/9.png" alt="New film">
+              <div class="sub-img">
+                <img src="img/hd.png"/>
+                <img src="img/new.png"/>
+              </div>
+            </div>
+            <div class="desc_text">
+              <div class="desc-part">
+                <span>YEAR</span>
+                <span>2015</span>
+              </div>
+              <div class="desc-part">
+                <span>RATING</span>
+                <span>9.1</span>
+              </div>
+              <a href="#" class="watch">WATCH</a>
+            </div>
+          </div>
+          <div class="new_box">
+            <div class="film_title">
+              <h3>COME TRUE</h3>
+            </div>
+            <div class="img">
+              <img src="img/films/10.png" alt="New film">
+              <div class="sub-img">
+                <img src="img/hd.png"/>
+                <img src="img/new.png"/>
+              </div>
+            </div>
+            <div class="desc_text">
+              <div class="desc-part">
+                <span>YEAR</span>
+                <span>2020</span>
+              </div>
+              <div class="desc-part">
+                <span>RATING</span>
+                <span>9.0</span>
+              </div>
+              <a href="#" class="watch">WATCH</a>
+            </div>
+          </div>
+          <div class="new_box">
+            <div class="film_title">
+              <h3>Fright Night</h3>
+            </div>
+            <div class="img">
+              <img src="img/films/11.png" alt="New film">
+              <div class="sub-img">
+                <img src="img/hd.png"/>
+                <img src="img/new.png"/>
+              </div>
+            </div>
+            <div class="desc_text">
+              <div class="desc-part">
+                <span>YEAR</span>
+                <span>2011</span>
+              </div>
+              <div class="desc-part">
+                <span>RATING</span>
+                <span>8.9</span>
+              </div>
+              <a href="#" class="watch">WATCH</a>
+            </div>
+          </div>
+          <div class="new_box">
+            <div class="film_title">
+              <h3>Back To Future</h3>
+            </div>
+            <div class="img">
+              <img src="img/films/12.png" alt="New film">
+              <div class="sub-img">
+                <img src="img/hd.png"/>
+                <img src="img/new.png"/>
+              </div>
+            </div>
+            <div class="desc_text">
+              <div class="desc-part">
+                <span>YEAR</span>
+                <span>1990</span>
+              </div>
+              <div class="desc-part">
+                <span>RATING</span>
+                <span>8.8</span>
+              </div>
+              <a href="#" class="watch">WATCH</a>
+            </div>
+          </div>
+          <div class="new_box">
+            <div class="film_title">
+              <h3>Fast & Furious 4</h3>
+            </div>
+            <div class="img">
+              <img src="img/films/13.png" alt="New film">
+              <div class="sub-img">
+                <img src="img/hd.png"/>
+                <img src="img/new.png"/>
+              </div>
+            </div>
+            <div class="desc_text">
+              <div class="desc-part">
+                <span>YEAR</span>
+                <span>2009</span>
+              </div>
+              <div class="desc-part">
+                <span>RATING</span>
+                <span>8.7</span>
+              </div>
+              <a href="#" class="watch">WATCH</a>
+            </div>
+          </div>
+          <div class="new_box">
+            <div class="film_title">
+              <h3>BLACK WIDOW</h3>
+            </div>
+            <div class="img">
+              <img src="img/films/14.png" alt="New film">
+              <div class="sub-img">
+                <img src="img/hd.png"/>
+                <img src="img/new.png"/>
+              </div>
+            </div>
+            <div class="desc_text">
+              <div class="desc-part">
+                <span>YEAR</span>
+                <span>2021</span>
+              </div>
+              <div class="desc-part">
+                <span>RATING</span>
+                <span>8.6</span>
+              </div>
+              <a href="#" class="watch">WATCH</a>
+            </div>
+          </div>
+          <div class="new_box">
+            <div class="film_title">
+              <h3>AVENGERS</h3>
+            </div>
+            <div class="img">
+              <img src="img/films/15.png" alt="New film">
+              <div class="sub-img">
+                <img src="img/hd.png"/>
+                <img src="img/new.png"/>
+              </div>
+            </div>
+            <div class="desc_text">
+              <div class="desc-part">
+                <span>YEAR</span>
+                <span>2018</span>
+              </div>
+              <div class="desc-part">
+                <span>RATING</span>
+                <span>8.5</span>
+              </div>
+              <a href="#" class="watch">WATCH</a>
+            </div>
+          </div>
+          <div class="new_box">
+            <div class="film_title">
+              <h3>GLADIATOR</h3>
+            </div>
+            <div class="img">
+              <img src="img/films/16.png" alt="New film">
+              <div class="sub-img">
+                <img src="img/hd.png"/>
+                <img src="img/new.png"/>
+              </div>
+            </div>
+            <div class="desc_text">
+              <div class="desc-part">
+                <span>YEAR</span>
+                <span>2000</span>
+              </div>
+              <div class="desc-part">
+                <span>RATING</span>
+                <span>8.4</span>
+              </div>
+              <a href="#" class="watch">WATCH</a>
+            </div>
+          </div>
+          <div class="new_box">
+            <div class="film_title">
+              <h3>MATRIX</h3>
+            </div>
+            <div class="img">
+              <img src="img/films/17.png" alt="New film">
+              <div class="sub-img">
+                <img src="img/hd.png"/>
+                <img src="img/new.png"/>
+              </div>
+            </div>
+            <div class="desc_text">
+              <div class="desc-part">
+                <span>YEAR</span>
+                <span>1999</span>
+              </div>
+              <div class="desc-part">
+                <span>RATING</span>
+                <span>8.3</span>
+              </div>
+              <a href="#" class="watch">WATCH</a>
+            </div>
+          </div>
+          <div class="new_box">
+            <div class="film_title">
+              <h3>HOODWINKED</h3>
+            </div>
+            <div class="img">
+              <img src="img/films/18.png" alt="New film">
+              <div class="sub-img">
+                <img src="img/hd.png"/>
+                <img src="img/new.png"/>
+              </div>
+            </div>
+            <div class="desc_text">
+              <div class="desc-part">
+                <span>YEAR</span>
+                <span>2005</span>
+              </div>
+              <div class="desc-part">
+                <span>RATING</span>
+                <span>8.2</span>
+              </div>
+              <a href="#" class="watch">WATCH</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+    </div>
+  </main>
+
+    <footer>
+      
+      <div class="logo">
+        <a href="/">
+          <img src="img/logo.png" alt="Logo">
+          <span>JulieMeo</span>
+          <span class="copy" style="margin-left:.5em;font-size: 3em;">&copy;</span>
+        </a>
+      </div>
+
+    </footer>
+
+    <script src="js/js.js"></script>
+  </body>
+</html>
+</body>
+</html>

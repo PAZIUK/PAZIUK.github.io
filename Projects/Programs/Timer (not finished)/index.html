@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Serhiy Paziuk</title>
+
+		<link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon.png">	 
+	  	<link rel="shortcut icon" href="/img/favicons/favicon-32x32.png" type="image/png">	 
+	  	<link rel="shortcut icon" href="/img/favicons/favicon.ico" type="image/x-icon">	 
+	  	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png">	 
+	  	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png">	 
+	  	<link rel="manifest" href="/img/favicons/site.webmanifest">	 
+	  	<link rel="mask-icon" href="/img/favicons/safari-pinned-tab.svg" color="#00ffd7">	 
+	  	<meta name="msapplication-TileColor" content="#00ffd7">	 
+	  	<meta name="msapplication-TileImage" content="/img/favicons/mstile-144x144.png">	 
+	  	<meta name="theme-color" content="#00ffd7">	
+
+	  	<link rel="stylesheet" href="style.css">
+
+	  	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	  	<link rel="preconnect" href="https://fonts.googleapis.com">
+  		<link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+	</head>
+	<body>
+			
+		<header>
+			<div class="container">
+				<nav>
+					<ul>
+						<li><a href="#">Online Timer</a></li>
+						<li><a href="../stopwatch/index.html">Online Stopwatch</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		
+
+		<div class="out">
+			<div class="container">
+				<div class="timer">
+					<div class="timer_block">
+						<div class="hours">00</div>
+						<span>:</span>
+						<div class="minutes">00</div>
+						<span>:</span>
+						<div class="seconds">00</div>
+					</div>
+					<div class="timer_block-btns">
+						<button class="start"><img src="https://img.icons8.com/ios-filled/50/26e07f/play--v1.png"/></button>
+						<button class="pause"><img src="https://img.icons8.com/ios-glyphs/50/000000/pause--v1.png"/></button>
+						<button class="reset">
+							<img src="https://img.icons8.com/material-rounded/48/e0dddd/recurring-appointment.png"/>
+						</button>
+					</div>
+					<div class="timer_desc">
+						<div class="sound"><img src="https://img.icons8.com/ios/50/26e07f/room-sound.png"/>Sound</div>
+						<div class="edit"><img src="https://img.icons8.com/ios-glyphs/30/4a90e2/pencil--v1.png"/>Edit</div>
+					</div>
+					<div class="timer_line">
+						<div class="line"></div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="edit_window">
+			<div class="edit_block">
+				<div class="header">
+				    <div class="header_name">EDIT TIMER</div>
+				    <div class="header_cross"><img src="https://img.icons8.com/ios-glyphs/30/ffffff/delete-sign.png"/></div>
+			    </div>
+			    <div class="body">
+			    	<div class="timer-settings">
+			    		<input type="number" id="hoursInput" maxlength="4" value="0">
+			    		<span>:</span>
+			    		<input type="number" id="minutesInput" maxlength="2" value="0">
+			    		<span>:</span>
+			    		<input type="number" id="secondsInput" maxlength="2" value="0">
+			    	</div>
+			    	<div class="timer-sound">
+			    		<select>
+			    			<option selected disabled>CHOOSE SOUND</option>
+			    			<option>Choose sound</option>
+			    			<option>Choose sound</option>
+                        </select>
+			    	</div>
+			    </div>
+			    <div class="footer">
+			    	<input type="submit" value="DONE">
+			    </div>
+			</div>
+		</div>
+
+		<script src="js.js"></script>
+	</body>
+</html>

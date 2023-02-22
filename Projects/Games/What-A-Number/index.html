@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>What a Number</title>
+		
+		<link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+		<link rel="manifest" href="img/favicons/site.webmanifest">
+		<meta name="msapplication-TileColor" content="#ff75a0">
+		<meta name="theme-color" content="#ffffff">
+
+		<link rel="stylesheet" href="style.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+  	<link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		
+		<div class="start">
+			<h1>Hello!</h1>
+			<h1>Now you need to choose a level of game</h1>
+			<div class="level">
+				<div class="level__items">
+					<input type="radio" id="level__5" class="level__item" name="level" value="5" onclick="level.fifth();">
+					<label for="level__5" class="level__label"></label>
+					<input type="radio" id="level__4" class="level__item" name="level" value="4" onclick="level.fourth();">
+					<label for="level__4" class="level__label"></label>
+					<input type="radio" id="level__3" class="level__item" name="level" value="3" onclick="level.third();">
+					<label for="level__3" class="level__label"></label>
+					<input type="radio" id="level__2" class="level__item" name="level" value="2" onclick="level.second();">
+					<label for="level__2" class="level__label"></label>
+					<input type="radio" id="level__1" class="level__item" name="level" value="1" onclick="level.first();">
+					<label for="level__1" class="level__label"></label>
+				</div>
+			</div>
+			<h2 id="levelNumbers">&#8291;</h2>
+			<button id="start" onclick="start();">LETS GO</button>
+		</div>
+		<div class="game">
+			<div class="settings">
+				<button id="back" onclick="back();"><img src="img/left.png"/></button>
+				<button id="refresh" onclick="refresh();"><img src="img/refresh.png"/></button>
+				<button id="sound" onclick="soundTurn();">
+					<img id="sound1" src="img/room-sound.png"/>
+					<img id="sound2" src="img/mute.png"/>
+				</button>
+			</div>
+			<div class="error"><span id="error">0</span><img src="img/error.png"/></div>
+			<h1>I guessed the number now you need to try to guess it</h1>
+			<h1 id="answer">&#8291;</h1>
+			<input type="text" id="num"  oninput="cleerAnswer();">
+			<button id="checkNum" onclick="game();">LET`S GO</button>
+		</div>
+		<div class="win">
+			<div class="win-window">
+				<h1>You are clever!</h1>
+				<h2>You guessed the number from&nbsp;<span id="tryIt"></span>&nbsp;attempts!</h2>
+				<button onclick="restart();">RESTART</button>
+			</div>
+		</div>
+
+		<script src="js.js"></script>
+	</body>
+</html>

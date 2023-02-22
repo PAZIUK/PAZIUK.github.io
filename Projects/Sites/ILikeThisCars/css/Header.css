@@ -1,0 +1,141 @@
+:root {
+  --h-h: 60px;
+  --color-1: #111d5e;
+  --color-2: #c70039;
+}
+header{
+	background-color: #c70039;
+	height: var(--h-h);
+	overflow: hidden;
+}
+.header{
+	max-width: 1024px;
+	margin: 0px auto;
+	display: flex;
+}
+
+
+
+.logo {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+}
+.logo img{
+	height: var(--h-h);
+}
+
+
+
+.menu{
+	position: relative;
+	flex: 6;
+	padding: auto 1%;
+}
+ul#menu{
+	display: flex;
+	justify-content: space-between;
+	transition: ease 1.5s all;
+}
+ul#menu li{
+	display: inline-flex;
+	margin-right: 1%;
+}
+ul#menu li a{
+	text-decoration: none;
+	color:#fff;
+	padding: 0.2em auto;	
+}
+ul#menu li a:hover, ul#menu li a:active{
+	text-decoration: none;
+	border-bottom: 2px solid var(--color-1);
+	color:#fff;
+}
+ul#menu li a::hover, ul#menu li a::active{
+	text-decoration: none;
+	border-bottom: 2px solid var(--color-1);
+	color:#fff;
+}
+ul#menu li.active{
+	text-decoration: none;
+	border-bottom: 2px solid var(--color-1);
+	color:#fff;
+}
+ul#menu li.active:hover, ul#menu li.active:active{
+	text-decoration: none;
+	border: none;
+	color:#fff;
+}
+.mobile-bar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  margin-right: 5%;
+  transition: all .8s;
+  border-radius: 10px;
+}
+.mobile-bar span{
+  display: block;
+  height: 3px;
+  width: 20px;
+  border-radius: 10px;
+  margin: 2px auto;
+  background-color: var(--color-1);
+}
+.mobile-bar.active{
+  transform: rotate(90deg);
+}
+.mobile-bar.active span{
+  background-color: var(--color-1);
+}
+
+
+
+
+.search{
+	flex: 3;
+	margin: auto 1%;
+	padding: 1%;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search input[type="search"] {
+    border: none;
+    outline: none;
+    padding: 2.5%;
+    max-width: 100px;
+    margin-right: 2%;
+}
+.search button{
+	background: none;
+	outline: none;
+	font-weight: bold;
+	padding: 2.5%;
+	border: none;
+}
+.search button:hover{
+	cursor: pointer;
+}
+
+
+@media(max-width:768px){
+	.menu{
+		display: none;
+	}
+	.search{
+		opacity: 0;
+    	visibility: hidden;
+	}
+	.mobile-bar{
+		opacity: 1;
+    	visibility: visible;
+	}
+	.toggleMenu .search{
+		opacity: 1;
+    	visibility: visible;
+	}
+}
