@@ -22,6 +22,7 @@ $font-8: 'Space Grotesk', sans-serif;
 
 :root{
   --rec-value: 1rem;
+  --clip-value: 3rem;
 }
 
 body {
@@ -96,8 +97,8 @@ body {
 }
 
 .clip{
-  -webkit-clip-path: polygon(20% 3rem, 50% 0, 80% 3rem, 100% 0, 100% calc(100% - 3rem), 80% 100%, 50% calc(100% - 3rem), 20% 100%, 0 calc(100% - 3rem), 0 0);
-  clip-path: polygon(20% 3rem, 50% 0, 80% 3rem, 100% 0, 100% calc(100% - 3rem), 80% 100%, 50% calc(100% - 3rem), 20% 100%, 0 calc(100% - 3rem), 0 0);
+  -webkit-clip-path: polygon(20% var(--clip-value), 50% 0, 80% var(--clip-value), 100% 0, 100% calc(100% - var(--clip-value)), 80% 100%, 50% calc(100% - var(--clip-value)), 20% 100%, 0 calc(100% - var(--clip-value)), 0 0);
+  clip-path: polygon(20% var(--clip-value), 50% 0, 80% var(--clip-value), 100% 0, 100% calc(100% - var(--clip-value)), 80% 100%, 50% calc(100% - var(--clip-value)), 20% 100%, 0 calc(100% - var(--clip-value)), 0 0);
 }
 
 .toggle-button {
@@ -992,7 +993,7 @@ body {
 
 
 
-/* Media queries */
+// Media queries
 @media (max-width: 480px) {
   .main-navbar {
     left: 0;
@@ -1002,37 +1003,26 @@ body {
     font-size: 2rem;
   }
 }
-
-@media (max-width: 768px) {
-  .toggle-button {
-    top: .7rem;
-  }
-}
-
 @media (max-width: 570px) {
   .navbar-circle {
     width: 150%;
   }
 }
-
 @media (min-width: 571px) and (max-width: 768px) {
   .navbar-circle {
     width: 130%;
   }
 }
-
 @media (min-width: 769px) and (max-width: 960px) {
   .navbar-circle {
     width: 120%;
   }
 }
-
 @media (max-width: 960px) {
   .toggle-button {
     margin: 0;
   }
 }
-
 @media (min-width: 2560px) {
   .navbar-circle {
     left: calc(100% - (100% * 1.8));
@@ -1050,8 +1040,6 @@ body {
     }
   }
 }
-
-
 
 // Hello section
 @media (max-width:480px){
@@ -1182,7 +1170,7 @@ body {
     }
   }
 }
-@media (max-width: 768px) and (min-width: 280px){
+@media (max-width: 768px){
   .hello-section {
     &__container {
       grid-template-areas:  
@@ -1230,26 +1218,153 @@ body {
   }
 }
 
-
-
 // About section
+@media (max-width: 320px){
+  :root{
+    --clip-value:1rem;
+  }
 
+  .title{
+    font-size: 2rem;
+  }
 
+  .about-section{
+    &__photo{
+      margin: 0 auto 1.5rem;
+      height: 20.8rem;
 
+      &__img{
+        height: 20rem;
+      }
+    }
+
+    .contacts{
+      &__child{
+        &__value{
+          font-size: .7rem;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 480px) and (min-width: 320px){
+  .title{
+    font-size: 3rem;
+  }
+
+  :root{
+    --clip-value:1rem;
+  }
+
+  .about-section{
+    .contacts{
+      &__child{
+        &__value{
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+@media (max-width:480px) {
+  .about-section{
+    .contacts{
+      &__child{
+        margin: .5rem auto 0;
+        &__key{
+          padding: 0 1.5rem;
+          display: flex;
+          align-items: center;
+
+          &__img{
+            width: 2rem;
+          }
+        }
+
+        &__value{
+          padding: .5rem 1.5rem;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 580px){
+  .about-section{
+    padding: 0 .5rem;
+
+    &__info{
+      &__title{
+        margin-left: auto;
+        margin-right: auto;
+      }
+      &__desc{
+        font-size: 1rem;
+      }
+    }
+  }
+}
+@media (max-width: 768px) and (min-width: 480px){
+  :root{
+    --clip-value:2rem;
+  }
+  .title{
+    font-size: 4rem;
+  }
+}
+@media (max-width: 768px){
+  .about-section{
+    .contacts{
+      flex-direction: column;
+
+      &__child:last-child{
+        margin: 1rem auto 0;
+
+        .contacts__child__value{
+          padding: .5rem 1.5rem;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 992px) and (min-width:320px){
+  .about-section{
+    &__photo{
+      margin: 0 auto 1.5rem;
+      height: 23.8rem;
+
+      &__img{
+        height: 23rem;
+      }
+    }
+  }
+}
+@media (max-width: 992px){  
+  .about-section{
+    &__block{
+      flex-direction: column;
+    }
+  }
+}
+@media (max-width: 1200px) and (min-width: 992px){
+  .about-section{
+    &__photo{
+      margin-right: 1rem;
+      height: 23.8rem;
+
+      &__img{
+        height: 23rem;
+      }
+    }
+  }
+}
 
 // Project section
-
-
 
 
 // Reviews section
 
 
-
-
 // Tech section
-
-
 
 
 // Footer
@@ -1275,12 +1390,9 @@ body {
   }
 }
 
-
-
-
 // Scrollbar style
 ::-webkit-scrollbar{
-  width: .9rem;
+  width: .8rem;
   height: 0;
 }
  
