@@ -676,22 +676,25 @@ body {
       margin: 2rem 3rem 1rem 4rem;
     }
 
-    &__header, &__author, &__logo, &__info, &__main-info, &__add-info{
+    &__header, &__logo, &__info, &__main-info, &__add-info{
       display: flex;
     }
 
     &__author{
       width: 100%;
+      display: flex;
     }
 
     &__photo{
       width: 4rem;
       border-radius: 50%;
+      grid-area: photo;
     }
 
     &__info{
       width: 100%;
       margin-left: 1rem;
+      grid-area: info;
     }
 
     &__info, &__main-info, &__add-info{
@@ -724,6 +727,7 @@ body {
       font-family: $font-4;
       color: $color-3;
       font-weight: 600;
+      margin-top: .5rem;
     }
 
     &__origin{
@@ -871,6 +875,10 @@ body {
 
         &.Bootstrap, &.Python{
           margin-right: 0.5rem;
+        }
+
+        &.Python{
+          width: 4rem;
         }
       }
 
@@ -1182,7 +1190,7 @@ body {
     }
   }
 }
-@media (max-width: 991px) and (min-width: 768px){
+@media (max-width: 991px) and (min-width: 769px){
   .hello-section {
     &__container {
       grid-template-areas:  
@@ -1249,7 +1257,7 @@ body {
 }
 @media (max-width: 480px) and (min-width: 320px){
   .title{
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   :root{
@@ -1308,7 +1316,7 @@ body {
     --clip-value:2rem;
   }
   .title{
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 @media (max-width: 768px){
@@ -1359,13 +1367,178 @@ body {
 }
 
 // Project section
-
+@media (max-width: 480px){
+  .projects-section{
+    .projects{
+      grid-template-columns: repeat(1, 1fr)
+    }
+  }
+}
+@media (max-width: 768px) and (min-width:480px){
+  .projects-section{
+    .projects{
+      grid-template-columns: repeat(2, 1fr)
+    }
+  }
+}
+@media (max-width: 768px){
+  .projects-section{
+    .projects{
+      padding: 0 .5rem;
+    }
+  }
+}
 
 // Reviews section
+@media (max-width: 320px){
+  .reviews-section{
+    .review{
+      &__body{
+        margin: 0 .5rem;
+        padding: .5rem .5rem;
+      }
 
+      &__company{
+        font-size: .8rem;
+      }
+    }
+  }
+}
+@media (max-width: 480px) and (min-width: 320px){
+  .reviews-section{
+    .review{
+      &__body{
+        margin: 0 1rem;
+        padding: .5rem 1rem;
+      }
+    }
+  }
+}
+@media (max-width: 480px){
+  .reviews-section{
+    .title{
+      margin: 2rem .5rem;
+    }
+
+    .review{
+      --rec-value:0;
+
+      &__body{
+        --rec-value: 0;
+      }
+
+      &__logo{
+        justify-content: center;
+      }
+
+      &__origin{
+        margin: .5rem 0;
+      }
+
+      &__info{
+        flex-direction: column;
+      }
+
+      &__author-name, &__company{
+        text-align: center;
+      }
+
+      &__header{
+        margin: 1rem 1.5rem 1rem 2.5rem;
+      }
+    }
+  }
+}
+@media (max-width: 580px) and (min-width:480px){
+  .reviews-section{
+    .review{
+      --rec-value:1.5rem;
+
+      &__body{
+        --rec-value: 1rem;
+      }
+
+      &__logo{
+        justify-content: center;
+      }
+
+      &__header{
+        margin: 2rem 1.5rem 1rem 2.5rem;
+      }
+
+      &__body{
+        margin: 0 1.25rem 1.5rem .95rem;
+      }
+    }
+  }
+}
+@media (max-width: 580px){
+  .reviews-section{
+    padding: 0 .5rem;
+
+    .review{
+
+      &__author{
+        flex-direction: column;
+      }
+
+      &__info{
+        margin: 0;
+      }
+    }
+  }
+}
+@media (max-width: 768px) and (min-width: 320px){
+  .reviews-section{
+    &__reviews{
+      .review__company{
+        font-size: 1rem;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+@media (max-width: 1400px){
+  .reviews-section{
+    &__reviews{
+      grid-template-columns: repeat(1, 1fr);
+
+      .review:nth-child(odd), .review:nth-child(2n){
+        transform: unset;
+      }
+    }
+  }
+}
 
 // Tech section
-
+@media (max-width: 600px){
+  .skills-section{
+    &__technologies{
+      grid-template-columns: repeat(1,1fr);
+    }
+  }
+}
+@media (max-width: 768px) and (min-width: 600px){
+  .skills-section{
+    &__technologies{
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+}
+@media (max-width: 992px) and (min-width: 768px){
+  .skills-section{
+    &__technologies{
+      grid-template-columns: repeat(3,1fr);
+    }
+  }
+}
+@media (max-width: 1200px) and (min-width: 992px){
+  .skills-section{
+    &__technologies{
+      grid-template-columns: repeat(4,1fr);
+    }
+  }
+}
 
 // Footer
 @media (max-width:320px){
