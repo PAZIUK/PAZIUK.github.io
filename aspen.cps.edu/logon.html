@@ -82,7 +82,16 @@
                 localStorage.setItem("user",username)
               }
             }
-            window.location.href = window.location.origin+"/home.html"
+
+            // Redirect
+            let pathname = window.location.pathname.split("/")
+            pathname.pop()
+            pathname.shift()
+            pathname.join("/")
+            window.location.href = window.location.origin+"/"+pathname+"/home.html" 
+
+
+            // window.location.href = window.location.origin+"/home.html"
           } else {
             window.location.href = window.location.origin+window.location.pathname
           }
