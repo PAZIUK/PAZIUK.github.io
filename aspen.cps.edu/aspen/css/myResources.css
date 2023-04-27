@@ -1,0 +1,60 @@
+#myResourcesTreePanel
+{
+    background:white;
+    min-height:100px;
+    height:auto;
+}
+
+#repositoryTreeOuterContainer 
+{
+    height:auto;
+    border:1px solid #89A;
+    background:#EAEEF8 url("images/mainNavIcons/bggradients/bg_myresources_gradient_top_repeat-x.png") repeat-x scroll 50% 0;
+}
+
+#myResourcesPanel
+{
+    position:absolute;
+    display:none;
+    left:300px;
+    top:300px;
+    width:280px;
+    height:300px;
+    z-index:100;
+}
+
+.repositoryListClass 
+{
+    overflow-y:hidden;
+    overflow-x:hidden;
+    visibility:hidden;
+    padding:4px;
+    height:290px;
+    background:none !important;
+}
+   
+#myResourcesContent
+{
+    width:280px;
+	height:300px;
+}
+
+h1.reset_style_h1 {
+    display: block;
+    font-size: 100%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    font-weight: bold;
+}
+
+h1.reset_style_h1_top {
+    display: block;
+    font-size: 100%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    font-weight: bold;
+}
