@@ -15,7 +15,6 @@ If you need a site you should to scroll down to see my projects (portfolio), and
 ![Bootstrap](https://img.shields.io/badge/-Bootstrap-ffffff?style=for-the-badge&logo=bootstrap)
 ![SCSS](https://img.shields.io/badge/-SASS/SCSS-264de4?style=for-the-badge&logo=sass)
 ![JavaScript](https://img.shields.io/badge/-JavaScript-ffffff?style=for-the-badge&logo=javascript)
-![JQuery](https://img.shields.io/badge/-JQuery-264de4?style=for-the-badge&logo=jquery)
 ![PHP](https://img.shields.io/badge/-PHP-090909?style=for-the-badge&logo=php)
 ![Laravel](https://img.shields.io/badge/-Laravel-090909?style=for-the-badge&logo=laravel)
 ![SQL](https://img.shields.io/badge/-SQL-ffffff?style=for-the-badge&logo=mysql)
